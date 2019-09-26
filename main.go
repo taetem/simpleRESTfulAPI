@@ -20,7 +20,7 @@ type Person struct {
 
 var attendees []Person
 
-func GetPersonEndpoint(w http.ResponseWriter, req *http.Request) {
+func GetAttendeeEndpoint(w http.ResponseWriter, req *http.Request) {
     params := mux.Vars(req)
     for _, item := range attendees {
         if item.ID == params["id"] {
